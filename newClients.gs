@@ -20,7 +20,7 @@ function createNewClient() {
 
   const clientFolder = newClientFolderStructure(clientName, motherFolderId);
   const projectFolders = createProjectFolderStructure(clientFolder.clientFolder, firstProjectAcronym, firstProjectFullName);
-  const templateCopies = rprFilesCreation(projectFolders);
+  const templateCopies = rprFilesCreation(projectFolders.rpr);
 
   editShortForm(firstProjectAcronym, templateCopies.newResearch, templateCopies.newProposal, templateCopies.newReport);
 
