@@ -1,5 +1,5 @@
 function removeAllViewers(folderId) {
-  
+  return null;
 }
 
 function removeAllEditors(folderId) {
