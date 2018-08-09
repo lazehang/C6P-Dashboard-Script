@@ -1,3 +1,4 @@
+//Create the research, proposal and report folder and the sub-structor
 function rprFilesCreation(shortForm, folder){
     //Template location
   const research = DriveApp.getFileById("1YSL_q_o5sc2_cm6Pd3lS3UggdsjEiD8XtmdpqnGcWNk");
@@ -15,6 +16,7 @@ function rprFilesCreation(shortForm, folder){
   newReport.setName(shortForm+"-Report Upon Completition");
 }
 
+//Create client main folder with corresponding input as arguments
 function newClientFolderStructure(clientFullName, firstProjectName, abbreviation, targetFolderId) {
   //Find the root of client collection folder
   var currentFolder = DriveApp.getFolderById(targetFolderId);
