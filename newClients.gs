@@ -3,7 +3,7 @@
 // Create a drop down menu on top of the Google Sheet
 function onOpen() {
   const ui = SpreadsheetApp.getUi();
-  ui.createMenu('Client Management').addItem('Create a new client with first line', 'createNewClient').addToUi();
+  ui.createMenu('Client Management').addItem('Create new client with folder structure', 'createNewClient').addToUi();
 }
 
 // To retrive information of a new client and create the folder structure with a cb function
