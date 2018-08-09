@@ -24,6 +24,7 @@ function createProjectFolderStructure(targetFolder, abbreviation, projectName) {
 
   // Returning folders as folders
   return {
+    projectFolder: projectFolder,
     assets: assets,
     contracts: contracts,
     meetings: meetings,
