@@ -32,11 +32,11 @@ function createNewClient() {
 
   // Change the value of the project name into a hyperline which links to the actual project folder
   const clientFolderUrl = clientFolder.clientFolder.getUrl();
-  sheet.getRange("C2").setValue("=hyperlink(" + clientFolderUrl + ", 'string')");
+  sheet.getRange("C2").setFormula("=hyperlink('" + clientFolderUrl + "', '" + clientName + "')");
 
   // Change clients name into a hyperline which links to the client's folder
   const projectFolderUrl = projectFolders.projectFolder.getUrl();
-  sheet.getRange("A2").setValue("=hyperlink(" + projectFolderUrl + ", 'string')");
+  sheet.getRange("A2").setFormula("=hyperlink('" + projectFolderUrl + "', '" + firstProjectFullName + "')");
 
   // Show a 3-second popup with the title "Status" and the message "Task started".
   SpreadsheetApp.getActiveSpreadsheet().toast('Built new client folder structure', 'Client Status', 2);
