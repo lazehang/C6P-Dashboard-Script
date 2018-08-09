@@ -10,13 +10,18 @@ function onOpen() {
 function createNewClient() {
   //Get current spreadsheet
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
-
+  const ui = SpreadsheetApp.getUi();
   //Extract information from the line
   // Harcoding
   const motherFolderId = "12TJ6jVVek5w3GTolf1Uw0GUXhg8PrLIm";
-  const clientName = sheet.getRange("C2").getValue();
-  const firstProjectFullName = sheet.getRange("A2").getValue();
-  const firstProjectAcronym = sheet.getRange("B2").getValue();
+
+  // Prompt the enter of client full name, project full name and the acronym
+  const clientName = ui.prompt("Client's Information", "Please enter client's full name" );
+  const firstProjectFullName = ui.prompt("Client's Information", "Please enter the name of the project" );
+  const firstProjectAcronym = ui.prompt("Client's Information", "Please enter the acronym of the project" );
+  // const clientName = sheet.getRange("C2").getValue();
+  // const firstProjectFullName = sheet.getRange("A2").getValue();
+  // const firstProjectAcronym = sheet.getRange("B2").getValue();
 
   // Create client main folder with corresponding input as arguments
   const clientFolder = newClientFolderStructure(clientName, motherFolderId);
