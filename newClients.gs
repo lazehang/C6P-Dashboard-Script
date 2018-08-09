@@ -22,7 +22,7 @@ function createNewClient() {
 
 
   // Create client main folder with corresponding input as arguments
-  const clientFolder = newClientFolderStructure(clientName, motherFolderId);
+  const clientFolder = newClientFolderStructure(clientName.getResponseText(), motherFolderId);
 
   // Create project folders with project name
   const projectFolders = createProjectFolderStructure(clientFolder.clientFolder, firstProjectAcronym.getResponseText(), firstProjectFullName.getResponseText());
