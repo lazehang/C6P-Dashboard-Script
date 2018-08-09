@@ -19,7 +19,7 @@ function createNewClient() {
   const firstProjectAcronym = sheet.getRange("B2").getValue();
 
   const clientFolder = newClientFolderStructure(clientName, motherFolderId);
-  const projectFolders = createProjectFolderStructure(clientFolder.clientFolder, firstProjectFullName);
+  const projectFolders = createProjectFolderStructure(clientFolder.clientFolder, firstProjectAcronym, firstProjectFullName);
   const templateCopies = rprFilesCreation(projectFolders);
 
   editShortForm(firstProjectAcronym, templateCopies.newResearch, templateCopies.newProposal, templateCopies.newReport);

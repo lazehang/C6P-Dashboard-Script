@@ -12,7 +12,7 @@ function newClientFolderStructure(clientFullName, targetFolderId) {
 }
 
 // Create project folder structures
-function createProjectFolderStructure(targetFolder, projectName) {
+function createProjectFolderStructure(targetFolder, abbreviation, projectName) {
   //Create folder with a project name
   const projectFolder = targetFolder.createFolder(abbreviation + "-" + projectName);
 
