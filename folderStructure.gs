@@ -1,35 +1,32 @@
 //Create client main folder with corresponding input as arguments
-function newClientFolderStructure(clientFullName, firstProjectName, abbreviation, targetFolderId) {
-  //Find the root of client collection folder
+function newClientFolderStructure(clientFullName, targetFolderId) {
+  //Find "Clients and Projects" folder in Drive
   var currentFolder = DriveApp.getFolderById(targetFolderId);
 
   //Create folder under client's name
   const clientFolder = currentFolder.createFolder(clientFullName);
 
-  //Remove all sharing editors auth
-  // removeAllEditors(clientFolder.getId());
+  return {
+    clientFolder: clientFolder
+  };
+}
 
+// Create project folder structures
+function createProjectFolderStructure(targetFolder, projectName) {
   //Create folder with a project name
-  const subFolder = clientFolder.createFolder(firstProjectName);
+  const projectFolder = targetFolder.createFolder(abbreviation + "-" + projectName);
 
   //Create folders under the project
-  const assets = subFolder.createFolder("Assets");
-  const contracts = subFolder.createFolder("Contracts");
-  const meetings = subFolder.createFolder("Meeting Minutes");
-  const rpr = subFolder.createFolder("Research, Proposal and Report");
+  const assets = projectFolder.createFolder("Assets");
+  const contracts = projectFolder.createFolder("Contracts");
+  const meetings = projectFolder.createFolder("Meeting Minutes");
+  const rpr = projectFolder.createFolder("Research, Proposal and Report");
 
-  //Create rpr files under rpr folder
-  rprFilesCreation(abbreviation, rpr);
-
+  // Returning folders as folders
   return {
-    clientFolder: clientFolder,
-    subFolder: subFolder,
     assets: assets,
     contracts: contracts,
     meetings: meetings,
     rpr: rpr
-  };
-
+  }
 }
-
-// function to run when there is a change of name
