@@ -85,7 +85,7 @@ function createNewProject() {
 
   // Change the value of the project name into a hyperline which links to the actual project folder
   const clientFolderUrl = clientFolder.getUrl();
-  sheet.getRange("C2").setFormula('=hyperlink("' + clientFolderUrl + '", "' + clientName.getResponseText() + '")');
+  sheet.getRange("C2").setFormula('=hyperlink("' + clientFolderUrl + '", "' + clientName + '")');
 
   // Change clients name into a hyperline which links to the client's folder
   const projectFolderUrl = projectFolders.projectFolder.getUrl();
