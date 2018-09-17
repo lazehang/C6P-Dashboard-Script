@@ -17,15 +17,31 @@ function createProjectFolderStructure(targetFolder, abbreviation, projectName) {
   const projectFolder = targetFolder.createFolder(abbreviation + "-" + projectName);
 
   //Create folders under the project
+  
+  //## Images, icons, design elements
   const assets = projectFolder.createFolder("Assets");
-  const contracts = projectFolder.createFolder("Contracts");
-  const meetings = projectFolder.createFolder("Meeting Minutes");
-  const rpr = projectFolder.createFolder("Research, Proposal and Report");
+  
+  //## Images, icons, design elements
+  const clientIpt = projectFolder.createFolder("Client Input");
+  
+  //## contracts, meetings, research, proposal and reports
+  const business = projectFolder.createFolder("Business");
+  
+  //## Any end products for clients
+  const production = projectFolder.createFolder("Production");
 
+  //Create sub folder structure under business
+  const contracts = business.createFolder("Contracts");
+  const meetings = business.createFolder("Meeting Minutes");
+  const rpr = business.createFolder("Research, Proposal and Report");
+  
   // Returning folders as folders
   return {
-    projectFolder: projectFolder,
+    projectFolder: projectFolder,    
     assets: assets,
+    clientInput : clientIpt,
+    business: business,
+    production: production,
     contracts: contracts,
     meetings: meetings,
     rpr: rpr
