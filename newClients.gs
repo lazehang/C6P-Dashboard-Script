@@ -36,8 +36,12 @@ function createNewClient() {
   // Copy template documents into "Research, Proposal and Report Upon Delivery"
   const templateCopies = rprFilesCreation(projectFolders.rpr);
 
+  
+  
+  
   // Amend name of the copied template documents
-  editShortForm(firstProjectAcronym.getResponseText(), templateCopies.newResearch, templateCopies.newProposal, templateCopies.newReport);
+  //  function editShortForm(projectAbbreviation, research, proposal, report, serviceContract, statementOfWork, initialProposal)
+  editShortForm(firstProjectAcronym.getResponseText(), templateCopies.newResearch, templateCopies.newProposal, templateCopies.newReport, templateCopies.newServiceContract, templateCopies.newStatementOfWork, templateCopies.newInitialProposal);
 
   // Insert empty row in second row
   sheet.insertRowAfter(1);
