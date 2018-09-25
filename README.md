@@ -21,7 +21,8 @@
 # What is this?
 This is a google script that aims to create a automized and standardized operational system for Cohort 6 Productions. Mainly it automizes the client onboarding operational procedures, such as creating folder structures, copying templates, replacing content with new client's name and company, date of creation, etc.
 
----
+The goal of this script is to optimize and standardize process that are time-consuming and distractive, using automation process to reduct time lost and improve performance of the company. The possibility of this structure can do has no end, however it's something that's often being undervalued by small businesses. 
+
 ## 2018.09.25 version 1.0.1
 ### Added
 - function replaceAll to replace placeholders with user inputs
