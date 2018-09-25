@@ -35,8 +35,18 @@ function createNewClient() {
 
   // Copy template documents into "Research, Proposal and Report Upon Delivery"
   const templateCopies = rprFilesCreation(projectFolders.rpr);
-
   
+//  Temperary extract templateCopies document into Array
+  const templateCopiesArray = [templateCopies.newResearch,templateCopies.newProposal, templateCopies.newReport, templateCopies.newStatementOfWork, templateCopies.newServiceContract, templateCopies.newInitialProposal];
+  
+
+//  Replace text within documents
+  for(var i = 0; i<templateCopiesArray.length; i++){
+    replaceAll(templateCopiesArray[i],"{{date}}",new Date());
+    replaceAll(templateCopiesArray[i],"{{project_name}}",firstProjectFullName.getResponseText());
+    replaceAll(templateCopiesArray[i],"{{client_firstName client_lastName}}",clientName.getResponseText());
+    
+  }
   
   
   // Amend name of the copied template documents
@@ -80,9 +90,21 @@ function createNewProject() {
 
   // Copy template documents into "Research, Proposal and Report Upon Delivery"
   const templateCopies = rprFilesCreation(projectFolders.rpr);
+  
+  //  Temperary extract templateCopies document into Array
+  const templateCopiesArray = [templateCopies.newResearch,templateCopies.newProposal, templateCopies.newReport, templateCopies.newStatementOfWork, templateCopies.newServiceContract, templateCopies.newInitialProposal];
+  
+
+//  Replace text within documents
+  for(var i = 0; i<templateCopiesArray.length; i++){
+    replaceAll(templateCopiesArray[i],"{{date}}",new Date());
+    replaceAll(templateCopiesArray[i],"{{project_name}}",firstProjectFullName.getResponseText());
+    replaceAll(templateCopiesArray[i],"{{client_firstName client_lastName}}",clientName);
+    
+  }
 
   // Amend name of the copied template documents
-  editShortForm(firstProjectAcronym.getResponseText(), templateCopies.newResearch, templateCopies.newProposal, templateCopies.newReport);
+  editShortForm(firstProjectAcronym.getResponseText(), templateCopies.newResearch, templateCopies.newProposal, templateCopies.newReport, templateCopies.newServiceContract, templateCopies.newStatementOfWork, templateCopies.newInitialProposal);
 
   // Insert empty row in second row
   sheet.insertRowAfter(1);

@@ -1,3 +1,4 @@
+//Call target google document, and replace the placeholders with targeted replacement text
 function replaceAll(document, placeholders, replacementText) {
   const body = DocumentApp.openById(document.getId()).getBody();
 
