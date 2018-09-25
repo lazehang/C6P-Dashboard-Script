@@ -1,9 +1,22 @@
 # Cohort 6 Productions Operation Procedures Automation
 <p align="center">
   <img src="https://github.com/ivanoung/C6P-Dashboard-Script/blob/master/Assets/banner.png?raw=true" />
-  <iframe width="630" height="355" src="https://www.useloom.com/embed/03d0d763bf914480a325b5ea4d38e193" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </p>
-
+<div align="center">
+  <h3>
+    <a href="https://www.useloom.com/share/03d0d763bf914480a325b5ea4d38e193">
+      Demo Video
+    </a>
+    <span> | </span>
+    <a href="https://github.com/ivanoung/C6P-Dashboard-Script">
+      Github Repo
+    </a>
+    <span> | </span>
+    <a href="https://www.cohort6productions.com/">
+      Cohort 6 Productions Hong Kong
+    </a>
+  </h3>
+</div>
 
 # What is this?
 This is a google script that aims to create a automized and standardized operational system for Cohort 6 Productions. Mainly it automizes the client onboarding operational procedures, such as creating folder structures, copying templates, replacing content with new client's name and company, date of creation, etc.
